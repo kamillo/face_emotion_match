@@ -1,0 +1,69 @@
+<html>
+<head>
+	<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var startTime;
+
+			var showMatch = function () {
+				$("#match").fadeIn();
+			}
+
+			var startMatch = function () {
+				$("#match").fadeIn();
+			}
+
+			showMatch();
+
+			$("#starter").click(function() {
+				$("#targets").fadeIn();
+				$("#starter").fadeOut();
+
+				startTime = new Date();
+			});
+
+			$("#target_left").click(function() {
+				var now = new Date();
+
+				alert(now - startTime);
+			});
+
+			$("#target_right").click(function() {
+				var now = new Date();
+
+				alert(now - startTime);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="menu">
+	</div>
+
+	<div id="match">
+		<div id="source" class="center">
+			<img src="contents/surprise_girl.jpg" alt="" width="200" height="200" class="circular"/>
+		</div>
+
+		<div id="starter" class="center">
+			<a href="#" class="startButton">Rozpocznij</a>
+		</div>
+
+		<div id="targets">
+			<div id="target_left" class="left">
+				<img src="contents/surprise.jpg" alt="" width="200" height="200">
+			</div>
+
+			<div id="target_right" class="right">
+				<img src="contents/anger.jpg" alt="" width="200" height="200">
+			</div>
+		</div>
+	</div>
+
+	<div id="choose">
+
+	</div>
+</body>
+</html>
